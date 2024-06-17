@@ -1,0 +1,71 @@
+1. Scalars
+    - They are single values and can be of different types:
+    - Strings: Represented as plain text. They can be enclosed in double quotes (") or single quotes (') 
+      if necessary (e.g., if the string contains special characters or starts with a special character).
+    - Numbers: Represented as integers (42), floating-point numbers (3.14), or exponential notation (6.022e23).
+    - Booleans: Represented as true or false.
+    - Null: Represented as null or ~ (tilde).
+
+name: John Doe           # String
+age: 30                  # Integer
+height: 1.75             # Floating-point number
+is_student: true         # Boolean
+description: null        # Null value
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+2. Lists:
+    - Lists are ordered collections of items, where each item is indexed starting from zero.
+    - Items are written with a leading dash (-).
+
+fruits:
+  - Apple
+  - Orange
+  - Banana
+
+-----------------------------------------------------------------------------------------------------------------------------  
+
+3. Dictionaries (Mappings):
+    - Dictionaries are collections of key-value pairs.
+    - Keys are unique within a dictionary and are followed by a colon (:).
+    - Values can be any YAML data type, including other dictionaries or lists.
+  
+person:
+  name: John Doe
+  age: 30
+  contacts:
+    email: john.doe@example.com
+    phone: "+1234567890"
+
+------------------------------------------------------------------------------------------------------------------------------
+
+4. Multi-Line Strings:
+    - Represented using block scalars (| or >).
+    - '|' preserves newlines and other whitespace characters.
+    - '>' treats newlines as spaces and removes most of them, keeping only those that are part of paragraph breaks.
+
+description: >
+  This is a folded block style in YAML.
+  It allows multiple lines of text, but
+  treats each newline as a space. It
+  ignores most newlines and only keeps
+  those that are part of a paragraph break.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+5. Anchors and Aliases:
+    - YAML supports references using anchors (&) and aliases (*), allowing you to reuse complex structures.
+
+defaults: &defaults
+  timeout: 30
+  retries: 3
+
+production:
+  <<: *defaults
+  server: production.example.com
+
+development:
+  <<: *defaults
+  server: localhost
+
+---------------------------------------------------------------------------------------------------------------------------------

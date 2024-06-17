@@ -1,0 +1,36 @@
+
+# scalars
+name: Akshay
+age: 22
+college: BMSIT
+is_student: true
+
+# list
+fruits:
+  - apple
+  - orange
+  - grapes
+
+# dictionaries
+firstName: Akshay
+school: "MSV Public School"
+contacts:
+  email: "akshay123@gmail.com"
+  contact_number: 91100010001
+
+# multi-line strings
+# folded block style (>)
+description: > 
+  This is a folded block style in YAML.
+  It allows multiple lines of text, but
+  treats each newline as a space. It
+  ignores most newlines and only keeps
+  those that are part of a paragraph break.
+
+# literal block style
+notes: |
+  This is a literal block style in YAML.
+  
+  It preserves all newlines and spaces exactly as they are typed.
+  
+  This style is useful for maintaining exact formatting, such as code blocks or poetry.

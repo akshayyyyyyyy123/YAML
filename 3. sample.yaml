@@ -1,0 +1,97 @@
+
+--- # start of yaml document
+
+# string with quotes 
+name: "Akshay"
+
+# number
+age: 22
+
+# string without quotes 
+city: Bengaluru
+
+# array/list of items
+# give either 2 or 4 spaces
+hobbies:
+  - Cricket
+  - Music
+  - Communication
+  - Walk
+
+# array / list
+skills:
+  - AWS
+  - Docker
+  - Jenkins
+  - "Bash Scripting"  # use '' or "" to for strings having space / special characters to avoid potential issue
+
+# object
+Laptop:
+  name: "MacBook Pro"
+  chipset: M3
+  model: 2023 
+  password: "p@ssw0rd!"   # special characters 
+
+# array of objects
+cars:
+  - model:
+      color: White
+      name: Benz
+  - model:
+      color: Black
+      name: Audi 
+
+# boolean values
+is_Indian: true
+has_iphone: false
+
+# In YAML, there are two main styles for handling multi-line strings: folded block style and literal block style.
+# Folded block style is denoted by the > character and is used when you want YAML to interpret newlines as spaces and 
+# ignore most newlines, except those that are part of an intended paragraph break. 
+# output will always be a single line
+# but provided space gets ignored
+description: >
+  This is a folded block style in YAML.
+  It allows multiple lines of text, but
+  treats each newline as a space. It
+  ignores most newlines and only keeps
+  those that are part of a paragraph break.
+
+# Literal Block Style (|): Preserves all newlines and spaces exactly as they are, maintaining exact formatting.
+# output will be same as the exact way u write
+notes: |
+  This is a literal block style in YAML.
+  
+  It preserves all newlines and spaces exactly as they are typed.
+  
+  This style is useful for maintaining exact formatting, such as code blocks or poetry.
+
+# YAML anchors(&) and alias(*)
+# In YAML, anchors and aliases are useful features that allow you to create references to existing data structures
+# within the same YAML document. 
+defaults: &defaults
+  server:
+    host: example.com
+    port: 8080
+
+dev:
+  <<: *defaults
+  server:
+    port: 3000  # Override port for development environment
+
+staging:
+  <<: *defaults
+  server:
+    host: staging.example.com  # Override host for staging environment
+
+prod:
+  <<: *defaults
+
+
+
+   
+    
+
+
+
+

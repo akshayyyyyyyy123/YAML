@@ -1,0 +1,55 @@
+YAML - YAML stands for "YAML Ain't Markup Language." It is a human-readable data serialization standard that is often used for writing configuration files.
+
+- Data serialization is the process of converting complex data structures into a format that can be easily stored or transmitted and then reconstructed later. While sometimes these formats can be human-readable (like JSON or YAML), the main goal is to make the data easy to save and share between different systems or parts of a program.
+
+---------------------------------------------------------------------------------------
+
+* Key features of YAML
+	- Human-Readable: YAML is designed to be easy to read and understand, with a simple, clean syntax.
+
+	- Hierarchical: Data is organized in a tree structure, making it easy to represent complex data.
+
+	- Portable: YAML is language-agnostic and can be used across different programming languages.
+
+	- Flexible: It supports various data types such as scalars (strings, numbers, booleans), lists, and dictionaries (maps).
+
+---------------------------------------------------------------------------------------
+
+* Why YAML?
+	- Simplicity: The syntax of YAML is straightforward and easy to learn. This simplicity makes it accessible to a wide range of users, including those who may not have a programming background.
+
+	- Readability: YAML files are designed to be human-readable. The indentation-based structure makes it easy to see the hierarchy and relationships between data elements at a glance.
+
+	- Flexibility: YAML supports complex data structures, including nested lists and dictionaries, which makes it suitable for representing configuration data and other hierarchical information.
+
+	- Language-Agnostic: YAML can be used with many programming languages, making it a versatile choice for configuration files and data interchange formats.
+
+	- Widely Adopted: YAML is widely used in the industry, with many tools and platforms supporting it. For example, Ansible uses YAML for its playbooks, Kubernetes uses YAML for its configuration files, and Docker uses YAML for Docker Compose files.	
+
+---------------------------------------------------------------------------------------
+
+* Here’s an example of a YAML file used as a configuration for a web application:
+	
+server:
+  host: localhost
+  port: 8080
+
+database:
+  type: mysql
+  host: db.example.com
+  port: 3306
+  username: user
+  password: pass
+
+logging:
+  level: debug
+  file: /var/log/app.log
+
+features:
+  - authentication
+  - analytics
+  - caching
+
+To validate your yaml file use:
+https://www.yamllint.com/
+https://jsonformatter.org/yaml-validator  

@@ -1,0 +1,57 @@
+* Points to note before writing yaml file:
+	
+	1) Indentation : 
+		* Use spaces, not tabs, for indentation. YAML files are very sensitive to indentation, and inconsistent indentation can lead to errors.
+		* Typically, two spaces per level of indentation are used, but four spaces are also common. Choose one and stick with it consistently.
+
+	2) Syntax:
+		* YAML files are built with key-value pairs. Ensure each key is followed by a colon and a space, then the value.
+
+	3) Data types:
+		* Strings can be written with or without quotes. Use quotes if the string contains special characters (like : or #).
+		* Represent boolean values with true/false or yes/no.
+		* Write numbers without quotes. Large numbers should be in quotes to avoid interpretation issues.
+		* Represent null values with null or ~.
+
+	4) Comments:
+		* Use the # symbol for comments. 
+		* Comments are ignored by parsers and can help explain sections of your YAML file.		
+
+	5) Special Characters:
+		* Be cautious with special characters. If a string contains special characters, wrap it in quotes.
+		* Use double quotes for strings that contain escape sequences.	
+
+	6) File Extensions:
+		* Save your YAML files with a .yaml or .yml extension. Both are acceptable, but .yaml is more commonly used.
+
+	7) Multi-Line Strings:
+		* Use | for literal block style (keeps newlines) or > for folded block style (folds newlines into spaces).	
+
+	Example of properly formatted YAML file
+
+# This is a comment explaining the configuration
+server:
+  host: localhost
+  port: 8080
+
+database:
+  type: mysql
+  host: db.example.com
+  port: 3306
+  username: user
+  password: "pass" # Quotes used because the value contains a special character
+
+logging:
+  level: debug
+  file: /var/log/app.log
+
+features:
+  - authentication
+  - analytics
+  - caching
+
+# Example of a multi-line string
+description: >
+  This is a multi-line string.
+  It will be folded into a single line when parsed.
+		

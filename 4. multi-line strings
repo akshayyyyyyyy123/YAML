@@ -1,0 +1,8 @@
+When to Use Each Style
+
+Folded Block Style (>): 
+    Use when you want to represent multi-line text as a single paragraph and prefer YAML to handle newlines as spaces.
+
+Literal Block Style (|): 
+    Use when you want to preserve exact formatting, such as code blocks, poetry, or any text where the exact layout
+and indentation are important.
